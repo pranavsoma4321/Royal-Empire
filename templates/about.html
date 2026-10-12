@@ -219,23 +219,6 @@
 {% include "_footer.html" %}
 
 <script src="{{ url_for('script_js') }}"></script>
-<script>
-  // Scroll-reveal using IntersectionObserver
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        // Stagger siblings inside the same parent
-        const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
-        const delay = siblings.indexOf(entry.target) * 80;
-        setTimeout(() => entry.target.classList.add('visible'), delay);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  reveals.forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>

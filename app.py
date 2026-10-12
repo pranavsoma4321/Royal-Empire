@@ -7,6 +7,7 @@ from pathlib import Path
 from flask import flash, redirect, render_template, request, url_for
 
 app = Flask(__name__, static_folder=None)
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "change-me-in-production")
 
 
 @app.get("/style.css")
@@ -54,13 +55,11 @@ def gallery():
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")  
-    
+    return render_template("contact.html")
 
-    app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "change-me-in-production")
- 
+
 ENQUIRIES_FILE = Path(__file__).parent / "enquiries.jsonl"
- 
+
 
 if __name__ == "__main__":
     app.run(debug=True)
