@@ -1,0 +1,235 @@
+/* MENU PAGE (add to the end of style.css) */
+.menu-nav {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 20;
+    background: rgba(10, 10, 10, .96);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(6px)
+}
+
+.menu-nav-inner {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-block: 12px;
+    scrollbar-width: none
+}
+
+.menu-nav-inner::-webkit-scrollbar {
+    display: none
+}
+
+.menu-nav a {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 22px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 14px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    transition: background .2s, color .2s, border-color .2s
+}
+
+.menu-nav a:hover,
+.menu-nav a.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--black)
+}
+
+@media (min-width:861px) {
+    .menu-nav-inner {
+        justify-content: center
+    }
+}
+
+.menu-section {
+    background: #0C0A08;
+    padding: clamp(32px, 5vw, 64px) 0 clamp(56px, 8vw, 110px)
+}
+
+.diet-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
+    margin-bottom: clamp(28px, 4vw, 48px);
+    font-size: 14px;
+    color: var(--muted)
+}
+
+.diet-legend li {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.menu-cat {
+    margin-bottom: clamp(40px, 6vw, 72px);
+    scroll-margin-top: calc(var(--header-h) + 76px)
+}
+
+.menu-cat h2 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(30px, 3.4vw, 52px);
+    color: var(--gold-light);
+    margin-bottom: clamp(14px, 2vw, 24px)
+}
+
+.menu-cat h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line)
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: 0 clamp(28px, 4vw, 72px)
+}
+
+.menu-item {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(201, 162, 75, .15)
+}
+
+.menu-item-top {
+    display: flex;
+    align-items: baseline;
+    gap: 10px
+}
+
+.menu-item h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(20px, 1.8vw, 27px);
+    color: var(--ivory)
+}
+
+.leader {
+    flex: 1;
+    min-width: 16px;
+    border-bottom: 1px dotted rgba(201, 162, 75, .4);
+    transform: translateY(-4px)
+}
+
+.menu-price {
+    color: var(--gold);
+    font-weight: 500;
+    white-space: nowrap
+}
+
+.menu-item p {
+    margin-top: 4px;
+    padding-left: 26px;
+    font-size: 15px;
+    color: var(--muted)
+}
+
+.menu-item.no-diet p {
+    padding-left: 0
+}
+
+.tag {
+    align-self: center;
+    padding: 2px 8px;
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap
+}
+
+.diet {
+    flex: none;
+    align-self: center;
+    display: inline-grid;
+    place-items: center;
+    width: 16px;
+    height: 16px;
+    border: 2px solid;
+    border-radius: 3px
+}
+
+.diet::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor
+}
+
+.diet.veg {
+    color: #3fae49
+}
+
+.diet.non {
+    color: #d8402f
+}
+
+.menu-cta {
+    margin-top: clamp(24px, 4vw, 48px);
+    text-align: center;
+    color: var(--muted)
+}
+
+.menu-cta p {
+    margin-bottom: 20px;
+    font-size: 14px
+}
+
+@media (max-width:560px) {
+    .menu-cta .btn {
+        width: 100%
+    }
+}
+
+/* TITLE BLOCK: skip this part if style.css already has .page-hero from the gallery page */
+.page-hero {
+    text-align: center;
+    padding: calc(var(--header-h) + clamp(48px, 7vw, 96px)) 0 clamp(32px, 5vw, 56px);
+    background: radial-gradient(ellipse at 50% 0%, #3a2410 0%, #0A0806 70%)
+}
+
+.page-kicker {
+    padding-top: 150px;
+    font-size: clamp(12px, 1.1vw, 16px);
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    color: var(--gold)
+}
+
+.page-hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(38px, 6vw, 92px);
+    line-height: 1.05;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    margin: clamp(10px, 1.4vw, 18px) 0
+}
+
+.page-hero h1 em {
+    font-style: normal;
+    color: var(--gold)
+}
+
+.page-lead {
+    max-width: 560px;
+    margin: 0 auto;
+    font-size: clamp(15px, 1.3vw, 19px);
+    color: var(--muted)
+}

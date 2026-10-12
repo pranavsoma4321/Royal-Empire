@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Royal Empire Hotel</title>
+    <meta name="description" content="Explore food, drinks and moments at Royal Empire Hotel.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('style_css') }}">
+</head>
+<body>
+    {% include "_header.html" %}
+    <!-- OFFERINGS -->
+    <section class="offerings" id="gallery">
+        <div class="container offerings-heading">
+            <p class="offerings-kicker">A Taste of Royalty</p>
+            <h2>Made to Be Savoured</h2>
+            <p>From beloved local flavours to refreshing signature drinks, discover something delicious for every
+                occasion.</p>
+        </div>
+        <div class="container offerings-grid">
+            <article class="offer">
+                <figure class="offer-media"><img src="../images/Authentic-Flavours.jpg"
+                        alt="Indian curries and rice served in copper bowls" loading="lazy"></figure>
+                <h3>Authentic Flavours</h3>
+                <p>Indian &amp; regional favourites</p>
+            </article>
+            <article class="offer">
+                <figure class="offer-media"><img src="../images/delight.jpg" alt="Sizzling grilled platter" loading="lazy">
+                </figure>
+                <h3>Continental Delights</h3>
+                <p>Global cuisine, great taste</p>
+            </article>
+            <article class="offer">
+                <figure class="offer-media"><img src="../images/signature-drinks.jpg"
+                        alt="Blue and red signature cocktails" loading="lazy"></figure>
+                <h3>Signature Drinks</h3>
+                <p>Crafted for every mood</p>
+            </article>
+
+            <article class="offer">
+                <figure class="offer-media"><img src="../images/Authentic-Flavours.jpg"
+                        alt="Indian curries and rice served in copper bowls" loading="lazy"></figure>
+                <h3>Authentic Flavours</h3>
+                <p>Indian &amp; regional favourites</p>
+            </article>
+            <article class="offer">
+                <figure class="offer-media"><img src="../images/delight.jpg" alt="Sizzling grilled platter" loading="lazy">
+                </figure>
+                <h3>Continental Delights</h3>
+                <p>Global cuisine, great taste</p>
+            </article>
+            <article class="offer">
+                <figure class="offer-media"><img src="../images/signature-drinks.jpg"
+                        alt="Blue and red signature cocktails" loading="lazy"></figure>
+                <h3>Signature Drinks</h3>
+                <p>Crafted for every mood</p>
+            </article>
+            <article class="offer">
+                <figure class="offer-media"><img src="../images/delight.jpg" alt="Sizzling grilled platter" loading="lazy">
+                </figure>
+                <h3>Continental Delights</h3>
+                <p>Global cuisine, great taste</p>
+            </article>
+            <article class="offer">
+                <figure class="offer-media"><img src="../images/signature-drinks.jpg"
+                        alt="Blue and red signature cocktails" loading="lazy"></figure>
+                <h3>Signature Drinks</h3>
+                <p>Crafted for every mood</p>
+            </article>
+        </div>
+    </section>
+    {% include "_footer.html" %}
+    <script src="{{ url_for('script_js') }}"></script>
+</body>
+</html>

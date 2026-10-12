@@ -1,0 +1,36 @@
+<header class="site-header" id="header">
+    <div class="container header-inner">
+        <a href="{{ url_for('home') }}" class="brand" aria-label="Royal Empire Hotel, home">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M10 14l6 6 8-10 8 10 6-6-3 12H13z" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linejoin="round" />
+                <text x="24" y="42" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-size="15"
+                    font-weight="700" fill="currentColor">RE</text>
+            </svg>
+            <span class="brand-text">
+                <span class="brand-name">Royal Empire</span>
+                <span class="brand-sub">Hotel</span>
+            </span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" id="nav" aria-label="Main">
+            <ul>
+                <li><a href="{{ url_for('home') }}" data-section="home"
+                    {% if request.endpoint == 'home' %}class="active"{% endif %}>Home</a></li>
+                <li><a href="{{ url_for('menu') }}" data-section="menu"
+                    {% if request.endpoint == 'menu' %}class="active"{% endif %}>Menu</a></li>
+                <li><a href="{{ url_for('about') }}" data-section="about"
+                    {% if request.endpoint == 'about' %}class="active"{% endif %}>About</a></li>
+                <li><a href="{{ url_for('gallery') }}" data-section="gallery"
+                    {% if request.endpoint == 'gallery' %}class="active"{% endif %}>Gallery</a></li>
+                <li><a href="{{ url_for('contact') }}" data-section="contact"
+                    {% if request.endpoint == 'contact' %}class="active"{% endif %}>Contact</a></li>
+            </ul>
+            <a href="{{ url_for('contact') }}" class="btn btn-outline">Book a Table</a>
+        </nav>
+    </div>
+</header>

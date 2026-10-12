@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0A0A0A">
+<title>About | Royal Empire Hotel</title>
+<meta name="description" content="Discover the warm hospitality and dining experience at Royal Empire Hotel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('style_css') }}">
+<link rel="stylesheet" href="{{ url_for('about_css') }}">
+</head>
+<body>
+
+{% include "_header.html" %}
+
+<main class="about-page">
+<!-- ═══ HERO ════════════════════════════════════════════════════════ -->
+<section class="about-hero">
+  <div class="container">
+    <div class="crown-wrap" aria-hidden="true">
+      <span></span>
+      <svg width="48" height="32" viewBox="0 0 48 32">
+        <path d="M4 8l9 9 11-13 11 13 9-9-4 18H8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M8 29h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span></span>
+    </div>
+    <p class="eyebrow">Our Story</p>
+    <h1>A Place to Dine,<br>Unwind &amp; <em>Belong</em></h1>
+    <p class="tagline">Good Food <i></i> Great Drinks <i></i> Royal Vibes</p>
+    <p class="lead">At Royal Empire Hotel, we bring people together over delicious food, refreshing drinks and genuine hospitality. Come for the food, stay for the warm atmosphere.</p>
+    <a href="{{ url_for('contact') }}" class="btn btn-solid">Book a Table <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</section>
+
+<!-- ═══ FEATURE STRIP ════════════════════════════════════════════════ -->
+<div class="about-strip">
+  <div class="container about-strip-inner">
+    <div class="strip-item">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M9 3v9a3 3 0 0 0 3 3v14M5 3v8a4 4 0 0 0 4 4M13 3v9M23 29V3c-3 2-4 6-4 10 0 3 1 4 4 4"/>
+      </svg>
+      <div>
+        <strong>Crafted Food</strong>
+        <span>Classic favourites &amp; signature dishes</span>
+      </div>
+    </div>
+    <div class="strip-item">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M5 5h22L16 17zM16 17v10M10 28h12M9 9h14"/>
+      </svg>
+      <div>
+        <strong>Premium Bar</strong>
+        <span>Refreshing drinks &amp; cocktails</span>
+      </div>
+    </div>
+    <div class="strip-item">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="11" r="4"/>
+        <circle cx="6" cy="14" r="3"/>
+        <circle cx="26" cy="14" r="3"/>
+        <path d="M8 27c0-5 3-8 8-8s8 3 8 8M1 25c0-4 2-6 5-6M31 25c0-4-2-6-5-6"/>
+      </svg>
+      <div>
+        <strong>Every Occasion</strong>
+        <span>Family, friends &amp; celebrations</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ STORY ════════════════════════════════════════════════════════ -->
+<section class="story">
+  <div class="container">
+    <div class="story-inner">
+      <div class="story-header reveal">
+        <p class="eyebrow">The Royal Empire Story</p>
+        <h2>Where Every Table Holds<br>a Memory Waiting to Be Made</h2>
+      </div>
+      <div class="story-col reveal">
+        <p class="pull-quote">"Come for the food.<br>Stay for the warmth."</p>
+        <p>At Royal Empire Hotel, we believe a great meal is only half the experience. The other half is the feeling — of being welcomed, of slowing down, of belonging somewhere.</p>
+        <p>We bring people together over delicious food, refreshing drinks and genuine hospitality — whether you are sharing a meal with family, catching up with friends, or celebrating a special occasion.</p>
+      </div>
+      <div class="story-col reveal">
+        <p>From comforting favourites to carefully prepared signature dishes, every detail is designed to make you feel at home — from the moment you walk in to the last bite on your plate.</p>
+        <p>Our kitchen is guided by one simple belief: that food made with care, served with warmth, has the power to turn an ordinary evening into something worth remembering.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SPECIALITY ═══════════════════════════════════════════════════ -->
+<section class="about-speciality">
+  <div class="container">
+    <div class="about-speciality-inner">
+      <div class="about-speciality-content reveal">
+        <p class="eyebrow">What Makes Us Different</p>
+        <h2>Taste the<br>Royal Difference</h2>
+        <p>Every dish that leaves our kitchen carries the care of our team, the warmth of our hospitality and the promise that you will leave happier than when you arrived. We do not just serve food — we create experiences.</p>
+        <a href="{{ url_for('menu') }}" class="btn btn-solid">Explore Our Menu <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="about-speciality-panel reveal">
+        <!-- Replace src with your actual image path -->
+        <!-- <img src="images/restaurant.jpg" alt="Royal Empire restaurant interior"> -->
+        <span class="panel-label">Your Image Here</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PILLARS ══════════════════════════════════════════════════════ -->
+<section class="pillars">
+  <div class="container">
+    <div class="pillars-heading reveal">
+      <p class="eyebrow">What We Stand For</p>
+      <h2>The Royal Empire Experience</h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar reveal">
+        <svg class="pillar-icon" viewBox="0 0 44 44" aria-hidden="true">
+          <path d="M14 8C14 8 12 16 12 22c0 4.4 2.6 7 6 8v8" stroke-linecap="round"/>
+          <path d="M18 8v12" stroke-linecap="round"/>
+          <path d="M22 8c0 0 6 4 6 12 0 0-2 1-6 1v11" stroke-linecap="round"/>
+        </svg>
+        <h3>Crafted Food</h3>
+        <p>Every dish prepared fresh — from timeless comforts to our chef's signature creations.</p>
+      </div>
+      <div class="pillar reveal">
+        <svg class="pillar-icon" viewBox="0 0 44 44" aria-hidden="true">
+          <circle cx="22" cy="22" r="13"/>
+          <path d="M22 10v4M22 30v4M10 22h4M30 22h4" stroke-linecap="round"/>
+          <circle cx="22" cy="22" r="4"/>
+          <path d="M22 18v4l3 3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Warm Ambience</h3>
+        <p>Thoughtfully lit, inviting, and designed to make every visit feel unhurried and special.</p>
+      </div>
+      <div class="pillar reveal">
+        <svg class="pillar-icon" viewBox="0 0 44 44" aria-hidden="true">
+          <circle cx="22" cy="14" r="6"/>
+          <path d="M10 38c0-8 4-12 12-12s12 4 12 12" stroke-linecap="round"/>
+          <path d="M28 20l4 4 6-7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Genuine Service</h3>
+        <p>Our team treats every guest like a regular — attentive, warm and genuinely glad you are here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VALUES ═══════════════════════════════════════════════════════ -->
+<section class="values">
+  <div class="container">
+    <div class="values-inner">
+      <div class="values-side reveal">
+        <p class="eyebrow">What Guides Us</p>
+        <h2>Built on Four Simple Promises</h2>
+      </div>
+      <ul class="values-list" role="list">
+        <li class="value-item reveal">
+          <span class="value-num">01</span>
+          <div class="value-body">
+            <h3>Quality Without Compromise</h3>
+            <p>Fresh ingredients, careful preparation and attention to every plate — every service, every day.</p>
+          </div>
+        </li>
+        <li class="value-item reveal">
+          <span class="value-num">02</span>
+          <div class="value-body">
+            <h3>Everyone is Welcome</h3>
+            <p>Whether you are celebrating a milestone or just need a quiet dinner, we make space for every occasion.</p>
+          </div>
+        </li>
+        <li class="value-item reveal">
+          <span class="value-num">03</span>
+          <div class="value-body">
+            <h3>Hospitality from the Heart</h3>
+            <p>We do not just serve food — we host people. That is a responsibility we take seriously.</p>
+          </div>
+        </li>
+        <li class="value-item reveal">
+          <span class="value-num">04</span>
+          <div class="value-body">
+            <h3>Memories Over Transactions</h3>
+            <p>We measure success by the guests who return and the ones who tell their friends.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ══════════════════════════════════════════════════════════ -->
+<section class="about-cta">
+  <div class="container">
+    <div class="crown-wrap reveal" aria-hidden="true">
+      <span></span>
+      <svg width="48" height="32" viewBox="0 0 48 32">
+        <path d="M4 8l9 9 11-13 11 13 9-9-4 18H8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M8 29h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span></span>
+    </div>
+    <p class="sub reveal">Come Visit Us</p>
+    <h2 class="reveal">Your Table is Waiting</h2>
+    <p class="lead reveal">Reserve a spot for dinner, mark a special occasion or simply walk in — we will make it worth your while.</p>
+    <div class="cta-btns reveal">
+      <a href="{{ url_for('menu') }}" class="btn btn-solid">Explore Our Menu <span aria-hidden="true">&rarr;</span></a>
+      <a href="{{ url_for('contact') }}" class="btn btn-outline">Book a Table</a>
+    </div>
+  </div>
+</section>
+</main>
+
+{% include "_footer.html" %}
+
+<script src="{{ url_for('script_js') }}"></script>
+<script>
+  // Scroll-reveal using IntersectionObserver
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Stagger siblings inside the same parent
+        const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
+        const delay = siblings.indexOf(entry.target) * 80;
+        setTimeout(() => entry.target.classList.add('visible'), delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

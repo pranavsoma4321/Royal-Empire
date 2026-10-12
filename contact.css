@@ -1,0 +1,276 @@
+/* CONTACT PAGE (add to the end of style.css, or save as contact.css) */
+.contact-section {
+    background: #0C0A08;
+    padding: clamp(40px, 6vw, 88px) 0
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+    gap: clamp(32px, 5vw, 88px);
+    align-items: start
+}
+
+.contact-info h2,
+.contact-form h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(30px, 3.4vw, 52px);
+    line-height: 1.1;
+    color: var(--ivory);
+    margin-bottom: 12px
+}
+
+.contact-lead {
+    max-width: 460px;
+    color: var(--muted);
+    font-size: clamp(15px, 1.2vw, 18px);
+    margin-bottom: clamp(22px, 3vw, 34px)
+}
+
+.contact-list {
+    display: grid;
+    gap: clamp(16px, 2vw, 24px);
+    margin-bottom: clamp(24px, 3vw, 36px)
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(14px, 1.4vw, 20px)
+}
+
+.c-icon {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: clamp(46px, 4vw, 54px);
+    height: clamp(46px, 4vw, 54px);
+    border: 1px solid var(--gold);
+    border-radius: 50%
+}
+
+.c-icon svg {
+    width: 46%;
+    height: 46%;
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+
+.contact-list b {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2px
+}
+
+.contact-list a,
+.contact-list address,
+.c-text {
+    font-style: normal;
+    font-size: clamp(15px, 1.25vw, 18px);
+    line-height: 1.5;
+    color: var(--ivory);
+    overflow-wrap: anywhere
+}
+
+.contact-list a:hover {
+    color: var(--gold-light)
+}
+
+.c-text {
+    color: var(--muted)
+}
+
+.contact-form {
+    padding: clamp(20px, 2.6vw, 38px);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #110d0a
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 20px 0 24px
+}
+
+.f-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0
+}
+
+.f-field.full {
+    grid-column: 1/-1
+}
+
+.f-field label {
+    font-size: 12px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold)
+}
+
+.f-field input,
+.f-field textarea {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    background: #0A0806;
+    border: 1px solid rgba(201, 162, 75, .35);
+    border-radius: 6px;
+    color: var(--ivory);
+    font-family: var(--sans);
+    font-size: 16px;
+    color-scheme: dark
+}
+
+.f-field textarea {
+    resize: vertical
+}
+
+.f-field input::placeholder,
+.f-field textarea::placeholder {
+    color: #7d7466
+}
+
+.f-field input:focus,
+.f-field textarea:focus {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 1px
+}
+
+.hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0
+}
+
+.contact-form .btn-solid:disabled {
+    opacity: .6;
+    cursor: wait
+}
+
+.form-note {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--muted)
+}
+
+.flash {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-top: 8px;
+    font-size: 15px
+}
+
+.flash-success {
+    background: rgba(80, 140, 70, .18);
+    border: 1px solid #5a9a4a;
+    color: #cfe8c6
+}
+
+.flash-error {
+    background: rgba(180, 60, 50, .18);
+    border: 1px solid #b8483c;
+    color: #f2cbc6
+}
+
+.contact-map {
+    background: #0C0A08;
+    padding: 0 0 clamp(56px, 8vw, 110px)
+}
+
+.map-card {
+    aspect-ratio: 21/8;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #111;
+    box-shadow: 0 0 40px rgba(201, 162, 75, .15)
+}
+
+.map-card iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: invert(92%) hue-rotate(180deg) saturate(.7) brightness(.9)
+}
+
+.map-btn {
+    margin-top: 20px
+}
+
+@media (max-width:860px) {
+    .contact-grid {
+        grid-template-columns: 1fr
+    }
+
+    .map-card {
+        aspect-ratio: 4/3
+    }
+}
+
+@media (max-width:560px) {
+    .form-grid {
+        grid-template-columns: 1fr
+    }
+
+    .contact-form .btn-solid,
+    .contact-info .btn,
+    .map-btn {
+        width: 100%
+    }
+}
+
+/* TITLE BLOCK: skip this part if style.css already has .page-hero */
+.page-hero {
+    text-align: center;
+    padding: calc(var(--header-h) + clamp(48px, 7vw, 96px)) 0 clamp(32px, 5vw, 56px);
+    background: radial-gradient(ellipse at 50% 0%, #3a2410 0%, #0A0806 70%)
+}
+
+.page-kicker {
+    font-size: clamp(12px, 1.1vw, 16px);
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-top: 100px;
+    font-weight: 500;
+}
+
+.page-hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(38px, 6vw, 92px);
+    line-height: 1.05;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    margin: clamp(10px, 1.4vw, 18px) 0;
+    margin-top: 50px;
+}
+
+.page-hero h1 em {
+    font-style: normal;
+    color: var(--gold)
+}
+
+.page-lead {
+    max-width: 560px;
+    margin: 0 auto;
+    font-size: clamp(15px, 1.3vw, 19px);
+    color: var(--muted)
+}

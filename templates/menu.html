@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0A0A0A">
+<title>Menu | Royal Empire Hotel</title>
+<meta name="description" content="Starters, main course, Chinese, continental and drinks at Royal Empire Hotel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('menu_css') }}">
+<link rel="stylesheet" href="{{ url_for('style_css') }}">
+</head>
+<body>
+
+{% include "_header.html" %}
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-kicker">Starters &middot; Mains &middot; Drinks</p>
+      <h1>Our <em>Menu</em></h1>
+      <p class="page-lead">Fresh food and signature drinks, served with care.</p>
+    </div>
+  </section>
+
+  <nav class="menu-nav" aria-label="Menu categories">
+    <div class="container menu-nav-inner">
+      <a href="#starters" class="active">Starters</a><a href="#main-course">Main Course</a><a href="#chinese-continental">Chinese &amp; Continental</a><a href="#drinks">Drinks</a>
+    </div>
+  </nav>
+
+  <section class="menu-section">
+    <div class="container">
+      <ul class="diet-legend" aria-label="Key">
+        <li><span class="diet veg" aria-hidden="true"></span> Vegetarian</li>
+        <li><span class="diet non" aria-hidden="true"></span> Non-vegetarian</li>
+      </ul>
+
+      <div class="menu-cat" id="starters">
+        <h2>Starters</h2>
+        <div class="menu-grid">
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet veg" role="img" aria-label="Vegetarian"></span><h3>Paneer Tikka</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Char-grilled cottage cheese with mint chutney</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet veg" role="img" aria-label="Vegetarian"></span><h3>Crispy Corn</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Golden corn tossed with pepper and herbs</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet veg" role="img" aria-label="Vegetarian"></span><h3>Hara Bhara Kebab</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Spinach and green pea kebabs, pan-seared</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet non" role="img" aria-label="Non-vegetarian"></span><h3>Chicken Tikka</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Tandoor-roasted chicken with house spices</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet non" role="img" aria-label="Non-vegetarian"></span><h3>Glazed Chicken Wings</h3><span class="tag">Chef&rsquo;s Special</span><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Sticky, spicy and crisp</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet non" role="img" aria-label="Non-vegetarian"></span><h3>Fish Fingers</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Crumb-coated fish with tartar dip</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="menu-cat" id="main-course">
+        <h2>Main Course</h2>
+        <div class="menu-grid">
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet veg" role="img" aria-label="Vegetarian"></span><h3>Dal Makhani</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Slow-cooked black lentils finished with butter</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet veg" role="img" aria-label="Vegetarian"></span><h3>Paneer Butter Masala</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Soft paneer in a rich, mild gravy</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet veg" role="img" aria-label="Vegetarian"></span><h3>Veg Biryani</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Fragrant rice layered with vegetables and spices</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet non" role="img" aria-label="Non-vegetarian"></span><h3>Butter Chicken</h3><span class="tag">Chef&rsquo;s Special</span><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Tender chicken in a creamy tomato gravy</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet non" role="img" aria-label="Non-vegetarian"></span><h3>Chicken Biryani</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Dum-cooked rice with spiced chicken and raita</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet non" role="img" aria-label="Non-vegetarian"></span><h3>Mutton Rogan Josh</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Slow-braised mutton in a Kashmiri-style gravy</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="menu-cat" id="chinese-continental">
+        <h2>Chinese &amp; Continental</h2>
+        <div class="menu-grid">
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet veg" role="img" aria-label="Vegetarian"></span><h3>Veg Hakka Noodles</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Wok-tossed noodles with crunchy vegetables</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet veg" role="img" aria-label="Vegetarian"></span><h3>Veg Manchurian</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Crisp dumplings in a tangy garlic sauce</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet veg" role="img" aria-label="Vegetarian"></span><h3>Loaded Fries</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Fries with cheese sauce, herbs and chilli</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet non" role="img" aria-label="Non-vegetarian"></span><h3>Chilli Chicken</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Wok-fried chicken with peppers and spring onion</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet non" role="img" aria-label="Non-vegetarian"></span><h3>Chicken Manchurian</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Crisp chicken in a tangy garlic sauce</p>
+          </article>
+          <article class="menu-item">
+            <div class="menu-item-top"><span class="diet non" role="img" aria-label="Non-vegetarian"></span><h3>Grilled Chicken Platter</h3><span class="tag">Chef&rsquo;s Special</span><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Served sizzling with sides and sauce</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="menu-cat" id="drinks">
+        <h2>Drinks</h2>
+        <div class="menu-grid">
+          <article class="menu-item no-diet">
+            <div class="menu-item-top"><h3>Signature Cocktails</h3><span class="tag">Chef&rsquo;s Special</span><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Crafted for every mood</p>
+          </article>
+          <article class="menu-item no-diet">
+            <div class="menu-item-top"><h3>Mocktail of the Day</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Fresh, fruity and alcohol free</p>
+          </article>
+          <article class="menu-item no-diet">
+            <div class="menu-item-top"><h3>Fresh Lime Soda</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Sweet, salted or mixed</p>
+          </article>
+          <article class="menu-item no-diet">
+            <div class="menu-item-top"><h3>Cold Coffee</h3><span class="leader"></span><span class="menu-price">&#8377;000</span></div>
+            <p>Thick, chilled and lightly sweet</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="menu-cta">
+        <p>Prices and availability may change. Please ask our team for today&rsquo;s specials.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-solid">Book a Table <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "_footer.html" %}
+
+<script src="{{ url_for('script_js') }}"></script>
+<script>
+// Highlight the category pill for the section in view
+(function () {
+  const links = document.querySelectorAll('.menu-nav a');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  const map = new Map();
+  links.forEach(function (a) {
+    const s = document.querySelector(a.getAttribute('href'));
+    if (s) map.set(s, a);
+  });
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        links.forEach(function (l) { l.classList.remove('active'); });
+        map.get(e.target).classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  map.forEach(function (a, s) { io.observe(s); });
+})();
+</script>
+</body>
+</html>
